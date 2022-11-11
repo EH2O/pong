@@ -1,8 +1,8 @@
 public class ball {
-    int x;
-    int y;
-    int vx = 1;
-    int vy = 1;
+    private int x;
+    private int y;
+    private int vx = 1;
+    private int vy = 1;
 
     public ball(int x, int y) {
         this.x = x;
@@ -17,10 +17,16 @@ public class ball {
         vy = vy*-1;
     }
     public void bounce(paddle p){
-        if (p.getY() == y){
+        if (x <= p.getX() + p.getW()/2 || x >= p.getX() - p.getW()/2){
             vx = vx*-1;
         }
 
+    }
+    public int getBX(){
+        return x;
+    }
+    public int getBY(){
+        return y;
     }
 
 }

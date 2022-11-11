@@ -1,7 +1,7 @@
 public class paddle {
-    int x;
-    int y;
-    int width = 10;
+    private int x;
+    private int y;
+     int width = 10;
 
     public paddle(int x, int y) {
         this.x = x;
@@ -13,6 +13,9 @@ public class paddle {
     }
     public int getY(){
         return y;
+    }
+    public int getW(){
+        return width;
     }
 
     public void MoveUp(int y) {
